@@ -70,7 +70,7 @@ namespace FinalExam_BasharJebry
                 msg = "Data deletion sucess!";
                 SqlConnection conn;
                 SqlCommand cmd;
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\project of c# summer 2020\FinalExam\FinalExam-BasharJebry\ABCTourDB_BasharJebry.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Resume\copy\copy\copy\copy\FinalExamProjectAndScreenShots-BasharJebry\FinalExam\FinalExam-BasharJebry\ABCTourDB_BasharJebry.mdf;Integrated Security=True");
                 conn.Open();
                 cmd = new SqlCommand("Delete from BusInfo where BusId=@Id", conn);
                 cmd.Parameters.AddWithValue("@Id", bus.BusId);
@@ -104,7 +104,7 @@ namespace FinalExam_BasharJebry
                 context.SaveChanges();
                 SqlConnection conn;
                 SqlCommand cmd;
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\project of c# summer 2020\FinalExam\FinalExam-BasharJebry\ABCTourDB_BasharJebry.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Resume\copy\copy\copy\copy\FinalExamProjectAndScreenShots-BasharJebry\FinalExam\FinalExam-BasharJebry\ABCTourDB_BasharJebry.mdf;Integrated Security=True");
                 conn.Open();
                 cmd = new SqlCommand("Insert into BusInfo values(@BusId, @Make, @Model,@NoOfSeat)", conn);
                 cmd.Parameters.AddWithValue("@BusId", bus.BusId);
@@ -144,7 +144,7 @@ namespace FinalExam_BasharJebry
                 msg = "Record Updated!!";
                 SqlConnection conn;
                 SqlCommand cmd;
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\project of c# summer 2020\FinalExam\FinalExam-BasharJebry\ABCTourDB_BasharJebry.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Resume\copy\copy\copy\copy\FinalExamProjectAndScreenShots-BasharJebry\FinalExam\FinalExam-BasharJebry\ABCTourDB_BasharJebry.mdf;Integrated Security=True");
                 conn.Open();
                 cmd = new SqlCommand("Update BusInfo set Model=@Model, Make=@Make ,NoOfSeats=@NoOfSeats where BusId=@BusId", conn);
                 cmd.Parameters.AddWithValue("@BusId", bus.BusId);
