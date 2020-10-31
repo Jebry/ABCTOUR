@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalExam-BasharJebry", "FinalExam-BasharJebry.csproj", "{FA4B4443-F5CE-4EFB-B339-35B6840B43A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourServiceHost_BasharJebry", "..\TourServiceHost_BasharJebry\TourServiceHost_BasharJebry.csproj", "{DCE06C10-76B1-49A2-B3E7-12D7E603C977}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA4B4443-F5CE-4EFB-B339-35B6840B43A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA4B4443-F5CE-4EFB-B339-35B6840B43A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA4B4443-F5CE-4EFB-B339-35B6840B43A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA4B4443-F5CE-4EFB-B339-35B6840B43A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE06C10-76B1-49A2-B3E7-12D7E603C977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE06C10-76B1-49A2-B3E7-12D7E603C977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE06C10-76B1-49A2-B3E7-12D7E603C977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE06C10-76B1-49A2-B3E7-12D7E603C977}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {796CCC9B-EF67-417A-99E2-30C5D8AA9BCF}
+	EndGlobalSection
+EndGlobal
