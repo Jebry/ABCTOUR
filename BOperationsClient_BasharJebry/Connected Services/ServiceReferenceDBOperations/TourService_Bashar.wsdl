@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TourService_Bashar" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ITourAuthenticateUserService_Bashar_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:3030/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:3030/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3030/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/FinalExam_BasharJebry" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITourDBOperationsService_Bashar_InsertABus_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertABus" />
+  </wsdl:message>
+  <wsdl:message name="ITourDBOperationsService_Bashar_InsertABus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertABusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITourDBOperationsService_Bashar_UpdateABus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateABus" />
+  </wsdl:message>
+  <wsdl:message name="ITourDBOperationsService_Bashar_UpdateABus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateABusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITourDBOperationsService_Bashar_RetrieveBusInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveBusInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITourDBOperationsService_Bashar_RetrieveBusInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveBusInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITourDBOperationsService_Bashar_DeleteABus_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteABus" />
+  </wsdl:message>
+  <wsdl:message name="ITourDBOperationsService_Bashar_DeleteABus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteABusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITourDBOperationsService_Bashar_FindABus_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindABus" />
+  </wsdl:message>
+  <wsdl:message name="ITourDBOperationsService_Bashar_FindABus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindABusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITourAuthenticateUserService_Bashar_AuthenticateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="ITourAuthenticateUserService_Bashar_AuthenticateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITourDBOperationsService_Bashar">
+    <wsdl:operation name="InsertABus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITourDBOperationsService_Bashar/InsertABus" message="tns:ITourDBOperationsService_Bashar_InsertABus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITourDBOperationsService_Bashar/InsertABusResponse" message="tns:ITourDBOperationsService_Bashar_InsertABus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateABus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITourDBOperationsService_Bashar/UpdateABus" message="tns:ITourDBOperationsService_Bashar_UpdateABus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITourDBOperationsService_Bashar/UpdateABusResponse" message="tns:ITourDBOperationsService_Bashar_UpdateABus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveBusInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITourDBOperationsService_Bashar/RetrieveBusInfo" message="tns:ITourDBOperationsService_Bashar_RetrieveBusInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITourDBOperationsService_Bashar/RetrieveBusInfoResponse" message="tns:ITourDBOperationsService_Bashar_RetrieveBusInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteABus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITourDBOperationsService_Bashar/DeleteABus" message="tns:ITourDBOperationsService_Bashar_DeleteABus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITourDBOperationsService_Bashar/DeleteABusResponse" message="tns:ITourDBOperationsService_Bashar_DeleteABus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindABus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITourDBOperationsService_Bashar/FindABus" message="tns:ITourDBOperationsService_Bashar_FindABus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITourDBOperationsService_Bashar/FindABusResponse" message="tns:ITourDBOperationsService_Bashar_FindABus_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ITourAuthenticateUserService_Bashar">
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITourAuthenticateUserService_Bashar/AuthenticateUser" message="tns:ITourAuthenticateUserService_Bashar_AuthenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITourAuthenticateUserService_Bashar/AuthenticateUserResponse" message="tns:ITourAuthenticateUserService_Bashar_AuthenticateUser_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITourDBOperationsService_Bashar" type="tns:ITourDBOperationsService_Bashar">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertABus">
+      <soap:operation soapAction="http://tempuri.org/ITourDBOperationsService_Bashar/InsertABus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateABus">
+      <soap:operation soapAction="http://tempuri.org/ITourDBOperationsService_Bashar/UpdateABus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveBusInfo">
+      <soap:operation soapAction="http://tempuri.org/ITourDBOperationsService_Bashar/RetrieveBusInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteABus">
+      <soap:operation soapAction="http://tempuri.org/ITourDBOperationsService_Bashar/DeleteABus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindABus">
+      <soap:operation soapAction="http://tempuri.org/ITourDBOperationsService_Bashar/FindABus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_ITourAuthenticateUserService_Bashar" type="tns:ITourAuthenticateUserService_Bashar">
+    <wsp:PolicyReference URI="#NetTcpBinding_ITourAuthenticateUserService_Bashar_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="AuthenticateUser">
+      <soap12:operation soapAction="http://tempuri.org/ITourAuthenticateUserService_Bashar/AuthenticateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TourService_Bashar">
+    <wsdl:port name="BasicHttpBinding_ITourDBOperationsService_Bashar" binding="tns:BasicHttpBinding_ITourDBOperationsService_Bashar">
+      <soap:address location="http://localhost:3030/TourService_Bashar" />
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_ITourAuthenticateUserService_Bashar" binding="tns:NetTcpBinding_ITourAuthenticateUserService_Bashar">
+      <soap12:address location="net.tcp://localhost:4040/TourService_Bashar" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:4040/TourService_Bashar</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>DESKTOP-E0OV21G\14379</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
